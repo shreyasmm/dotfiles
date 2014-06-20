@@ -8,4 +8,4 @@ These files contain Configuration for
 Happy Coding
 
 #Installation
-Clone the repo git clone https://github.com/MMShreyas/dotfiles.git
+Clone the repo '''git clone https://github.com/MMShreyas/dotfiles.git'''
