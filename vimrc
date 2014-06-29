@@ -48,6 +48,7 @@ let g:airline_theme='badwolf'
 "Vim Settings
 colors github
 set mouse=a
+set ttymouse=xterm2
 set number                " show line numbers
 set laststatus=2          " last window always has a statusline
 filetype indent on        " activates indenting for files
@@ -63,3 +64,37 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text"
+set enc=utf-8             " utf-8 default encoding
+" Move Backup Files to ~/.vim/sessions
+set backupdir=~/.vim/sessions
+set dir=~/.vim/sessions
+
+" enable automatic title setting for terminals
+set title
+set titleold="Terminal"
+set titlestring=%F
+set tabstop=8
+
+" ; is an alias for :
+nnoremap ; :
+
+" Make syntastic auto update the location list and make it also check
+" when the file opens
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_check_on_open=1
+
+
+"" Searching
+set hlsearch " highlight matches
+set incsearch " incremental searching
+set ignorecase " searches are case insensitive...
+set smartcase " ... unless they contain at least one capital letter
+set scrolloff=3 " don't show search results as the first line
+
+"nerdtree settings
+let g:NERDTreeMouseMode = 2
+
+"statusline 
+"set statusline =%#identifier#
+"set statusline+=[%t] "tail of the filename
+"set statusline+=%*

@@ -12,8 +12,9 @@ ZSH_THEME="robbyrussell"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c='clear'
 alias ..='cd ..'
-alias install="sudo apt-get install"
-
+alias app="sudo apt-get install"
+alias search="ps aux|grep -i"
+alias update="sudo apt-get update"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
