@@ -15,6 +15,15 @@ alias ..='cd ..'
 alias app="sudo apt-get install"
 alias search="ps aux|grep -i"
 alias update="sudo apt-get update"
+alias mysql="sudo service mysql start"
+alias apache="sudo service apache2 start"
+alias up="mysql & apache"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias zshrc="vim ~/.zshrc && reload"
+alias up="vagrant up"
+alias down="vagrant halt"
+alias connect="ssh vagrant@127.0.0.1 -p 2222"
+alias p="php artisan"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -52,7 +61,7 @@ alias update="sudo apt-get update"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git battery bower colorize command-not-found common-aliases laravel4)
 
 source $ZSH/oh-my-zsh.sh
 
