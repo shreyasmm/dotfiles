@@ -85,3 +85,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+export HOME="/home/shrey"
+export ANDROID_HOME="$HOME/dev/adt-bundle-linux-x86_64-20140702/sdk"
+export PATH="$HOME/dev/adt-bundle-linux-x86_64-20140702/sdk/tools:$ANDROID_HOME/platform_tools:$PATH"
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
