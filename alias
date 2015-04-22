@@ -1,0 +1,40 @@
+
+
+# Common
+alias c='clear'
+alias ..='cd ..'
+alias search="ps aux|grep -i"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+# Packages
+alias app="sudo apt-get install"
+alias update="sudo apt-get update"
+
+# Dev
+alias mysql="sudo service mysql start"
+alias apache="sudo service apache2 start"
+alias up="mysql & apache"
+alias server="python -m SimpleHTTPServer"
+
+# Laravel 
+alias art="php artisan"
+alias arts="php artisan serve"
+alias artr="php artisan route:list"
+alias artm="art migrate"
+alias artm:r="art migrate:rollback"
+alias artm:s="art migrate:status" 
+
+# Rails
+alias rails="/usr/local/bin/rails"
+
+# Vagrant
+alias up="vagrant up"
+alias down="vagrant halt"
+alias connect="ssh vagrant@127.0.0.1 -p 2222"
+
+# Projects
+alias lar='cd ~/Development/Laravel'
+alias railsd='cd ~/Development/Rails'
+alias hms='cd ~/Development/Laravel/hms'
+
+

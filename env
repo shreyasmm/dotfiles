@@ -1,0 +1,4 @@
+# Env Variables
+export ANDROID_HOME="$HOME/dev/adt-bundle-linux-x86_64-20140702/sdk"
+export PATH="$HOME/dev/adt-bundle-linux-x86_64-20140702/sdk/tools:$ANDROID_HOME/platform_tools:$PATH"
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"

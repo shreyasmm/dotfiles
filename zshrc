@@ -5,25 +5,13 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="flat"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias c='clear'
-alias ..='cd ..'
-alias app="sudo apt-get install"
-alias search="ps aux|grep -i"
-alias update="sudo apt-get update"
-alias mysql="sudo service mysql start"
-alias apache="sudo service apache2 start"
-alias up="mysql & apache"
-alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-alias zshrc="vim ~/.zshrc && reload"
-alias up="vagrant up"
-alias down="vagrant halt"
-alias connect="ssh vagrant@127.0.0.1 -p 2222"
-alias p="php artisan"
+
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -61,7 +49,7 @@ alias p="php artisan"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery bower colorize command-not-found common-aliases laravel4)
+plugins=(git ruby rails battery uower colorize command-not-found common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,6 +74,10 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 export HOME="/home/shrey"
-export ANDROID_HOME="$HOME/dev/adt-bundle-linux-x86_64-20140702/sdk"
-export PATH="$HOME/dev/adt-bundle-linux-x86_64-20140702/sdk/tools:$ANDROID_HOME/platform_tools:$PATH"
-export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+#rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+source $HOME/.alias
+source $HOME/.env
+
+eval "$(rbenv init -)"
