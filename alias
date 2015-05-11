@@ -5,24 +5,39 @@ alias c='clear'
 alias ..='cd ..'
 alias search="ps aux|grep -i"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias please=sudo
+alias week='date +%V'
+
+#fun
+alias starwars="telnet towel.blinkenlights.nl"
+alias nyan='nc -v nyancat.dakko.us 23'
+
+# System
+alias s='systemctl status'
+alias sstart='systemctl start'
+alias sstop='systemctl stop'
 
 # Packages
-alias app="sudo apt-get install"
+alias appinstall="sudo apt-get install"
+alias appsearch="apt-cache show"
+
+
 alias update="sudo apt-get update"
 
 # Dev
 alias mysql="sudo service mysql start"
 alias apache="sudo service apache2 start"
 alias up="mysql & apache"
-alias server="python -m SimpleHTTPServer"
+alias webserver="python -m SimpleHTTPServer"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# Laravel 
+# Laravel
 alias art="php artisan"
 alias arts="php artisan serve"
 alias artr="php artisan route:list"
 alias artm="art migrate"
 alias artm:r="art migrate:rollback"
-alias artm:s="art migrate:status" 
+alias artm:s="art migrate:status"
 
 # Rails
 alias rails="/usr/local/bin/rails"

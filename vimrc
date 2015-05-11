@@ -2,7 +2,6 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax enable
 
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -17,7 +16,6 @@ Bundle 'Raimondi/delimitMate.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'docunext/closetag.vim.git'
 Bundle 'scrooloose/syntastic.git'
-Bundle 'neocomplcache.vim.git'
 
 Plugin 'tpope/vim-fugitive'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -42,11 +40,12 @@ call vundle#end()            " required
 "Airline Settings
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
-set t_Co=256
 let g:airline_theme='badwolf'
+set noshowmode
 
 "Vim Settings
-colors github
+set t_Co=256              " Enable Full Color Support
+colors xoria256
 set mouse=a
 set ttymouse=xterm2
 set number                " show line numbers
@@ -65,6 +64,15 @@ set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text"
 set enc=utf-8             " utf-8 default encoding
+syntax on                 " Enable Syntax Highlighting
+set cursorline            " Highlight the currient line
+set spelllang=en_us            " Set the spellchecking language"
+set listchars=tab:▸\           " ┐
+set listchars+=trail:·         " │ Use custom symbols to
+set listchars+=eol:↴           " │ represent invisible characters
+set listchars+=nbsp:_          " ┘
+"set background=dark        " Dark background
+set expandtab             " Expand tabs to spaces
 " Move Backup Files to ~/.vim/sessions
 set backupdir=~/.vim/sessions
 set dir=~/.vim/sessions
@@ -77,7 +85,9 @@ set tabstop=8
 
 " ; is an alias for :
 nnoremap ; :
-
+nnoremap y y$
+nmap <leader>w :w!<cr>
+imap jj <esc>
 " Make syntastic auto update the location list and make it also check
 " when the file opens
 let g:syntastic_always_populate_loc_list=1
@@ -98,3 +108,4 @@ let g:NERDTreeMouseMode = 2
 "set statusline =%#identifier#
 "set statusline+=[%t] "tail of the filename
 "set statusline+=%*
+map <C-n> :NERDTreeToggle<CR>

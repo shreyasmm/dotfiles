@@ -1,0 +1,87 @@
+{
+	"auto_complete": true,
+	"auto_complete_with_fields": true,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"*.dmp",
+		"*/min/*.js",
+		"*/min/*.css",
+		"*/min/*.map"
+	],
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Theme - Glacier/glacier.tmTheme",
+	"default_encoding": "UTF-8",
+	"default_line_ending": "unix",
+	"detect_indentation": true,
+	"draw_indent_guides": true,
+	"draw_minimap_border": true,
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"cache.properties",
+		"*.map",
+		"*.orig"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		".bundle",
+		".sass-cache"
+	],
+	"font_face": "Menlo",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 17,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"match_brackets": true,
+	"match_brackets_angle": true,
+	"scroll_past_end": true,
+	"tab_size": 4,
+	"theme": "Glacier.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true,
+	"wrap_width": 80
+}
