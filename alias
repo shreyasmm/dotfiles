@@ -20,9 +20,8 @@ alias sstop='systemctl stop'
 # Packages
 alias appinstall="sudo apt-get install"
 alias appsearch="apt-cache show"
-
-
-alias update="sudo apt-get update"
+alias appupdate="sudo apt-get update"
+alias appupgrade="sudo apt-get update && sudo apt-get updrade"
 
 # Dev
 alias mysql="sudo service mysql start"
@@ -38,7 +37,7 @@ alias artr="php artisan route:list"
 alias artm="art migrate"
 alias artm:r="art migrate:rollback"
 alias artm:s="art migrate:status"
-
+alias artt="php artisan tinker"
 # Rails
 alias rails="/usr/local/bin/rails"
 
@@ -48,8 +47,8 @@ alias down="vagrant halt"
 alias connect="ssh vagrant@127.0.0.1 -p 2222"
 
 # Projects
-alias lar='cd ~/Development/Laravel'
-alias railsd='cd ~/Development/Rails'
-alias hms='cd ~/Development/Laravel/hms'
+alias lar='cd ~/Code/Laravel'
+alias railsd='cd ~/Code/Rails'
+alias hms='cd ~/Code/Laravel/hms'
 
 

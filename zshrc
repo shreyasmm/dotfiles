@@ -30,7 +30,7 @@ antigen-bundle systemadmin
 
 # Other Plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle trapd00r/zsh-syntax-highlighting-filetypes
+
 # Load the theme.
 antigen theme robbyrussell
 
