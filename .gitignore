@@ -4,3 +4,4 @@
 [._]s[a-w][a-z]
 # Vundle Plugins
 vim/bundle/*
+!vim/bundle/Vundle.vim
