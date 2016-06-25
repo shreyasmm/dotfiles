@@ -1,6 +1,6 @@
-export HOME="/home/shrey"
-source $HOME/.alias
+
 source $HOME/.env
+source $HOME/.alias
 source $HOME/.functions
 
 # antigen
@@ -32,26 +32,11 @@ antigen-bundle systemadmin
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme robbyrussell
+antigen theme bhilburn/powerlevel9k powerlevel9k
 
 antigen-apply
 
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# rbenv init
-eval "$(rbenv init -)"
-
-
-autoload predict-on
-predict-on
-
+#autoload predict-on
+#predict-on
 
