@@ -22,7 +22,7 @@
 		"*/min/*.map"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Theme - Glacier/glacier.tmTheme",
+	"color_scheme": "Packages/Materialize/schemes/Material Seti.tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"detect_indentation": true,
@@ -61,7 +61,7 @@
 		".bundle",
 		".sass-cache"
 	],
-	"font_face": "Menlo",
+	// "font_face": "Menlo",
 	"font_options":
 	[
 		"subpixel_antialias"
@@ -79,9 +79,10 @@
 	"match_brackets_angle": true,
 	"scroll_past_end": true,
 	"tab_size": 4,
-	"theme": "Glacier.sublime-theme",
+	"theme": "Material Seti.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
 	"wrap_width": 80
 }
+
