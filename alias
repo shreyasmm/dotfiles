@@ -6,6 +6,7 @@ alias s=sudo
 alias ..='cd ..'
 alias search="ps aux|grep -i"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias rmrf="rm -rf"
 
 # Utilities
 alias week='date +%V'
