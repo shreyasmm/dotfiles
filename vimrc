@@ -10,7 +10,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Bundle 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'Raimondi/delimitMate.git'
 Bundle 'scrooloose/nerdtree.git'
