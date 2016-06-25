@@ -4,7 +4,7 @@ source $HOME/.alias
 source $HOME/.functions
 
 # antigen
-source $HOME/.antigen/antigen.zsh
+source $HOME/.dotfiles/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
