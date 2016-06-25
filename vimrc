@@ -10,7 +10,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'Raimondi/delimitMate.git'
 Bundle 'scrooloose/nerdtree.git'
@@ -24,17 +24,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
-
-
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 
 "Airline Settings
@@ -104,7 +93,7 @@ set scrolloff=3 " don't show search results as the first line
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
 
-"statusline 
+"statusline
 "set statusline =%#identifier#
 "set statusline+=[%t] "tail of the filename
 "set statusline+=%*
