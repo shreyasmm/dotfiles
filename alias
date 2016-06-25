@@ -25,6 +25,11 @@ alias apps="apt-cache show"
 alias appupd="sudo apt-get update"
 alias appupg="sudo apt-get update && sudo apt-get updrade"
 
+#git
+alias gs="git status"
+alias gc="git commit"
+alias ga="git add"
+alias gpo="git push origin"
 # Projects
 alias lard='cd ~/Code/Laravel'
 alias railsd='cd ~/Code/Rails'
