@@ -2,33 +2,32 @@
 
 # Common
 alias c='clear'
+alias s=sudo
 alias ..='cd ..'
 alias search="ps aux|grep -i"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-alias please=sudo
-alias week='date +%V'
 
-#fun
+# Utilities
+alias week='date +%V'
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias webserver="python -m SimpleHTTPServer"
+
+# fun
 alias starwars="telnet towel.blinkenlights.nl"
 alias nyan='nc -v nyancat.dakko.us 23'
 
 # System
-alias s='systemctl status'
-alias sstart='systemctl start'
-alias sstop='systemctl stop'
+alias sts='systemctl status'
+alias srt='systemctl start'
+alias stp='systemctl stop'
+alias appi="sudo apt-get install"
+alias apps="apt-cache show"
+alias appupd="sudo apt-get update"
+alias appupg="sudo apt-get update && sudo apt-get updrade"
 
-# Packages
-alias appinstall="sudo apt-get install"
-alias appsearch="apt-cache show"
-alias appupdate="sudo apt-get update"
-alias appupgrade="sudo apt-get update && sudo apt-get updrade"
-
-# Dev
-alias mysql="sudo service mysql start"
-alias apache="sudo service apache2 start"
-alias up="mysql & apache"
-alias webserver="python -m SimpleHTTPServer"
-alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+# Projects
+alias lard='cd ~/Code/Laravel'
+alias railsd='cd ~/Code/Rails'
 
 # Laravel
 alias art="php artisan"
@@ -37,18 +36,3 @@ alias artr="php artisan route:list"
 alias artm="art migrate"
 alias artm:r="art migrate:rollback"
 alias artm:s="art migrate:status"
-alias artt="php artisan tinker"
-# Rails
-alias rails="/usr/local/bin/rails"
-
-# Vagrant
-alias up="vagrant up"
-alias down="vagrant halt"
-alias connect="ssh vagrant@127.0.0.1 -p 2222"
-
-# Projects
-alias lar='cd ~/Code/Laravel'
-alias railsd='cd ~/Code/Rails'
-alias hms='cd ~/Code/Laravel/hms'
-
-
