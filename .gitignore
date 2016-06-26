@@ -6,3 +6,7 @@
 vim/*
 !vim/bundle/Vundle.vim
 !vim/colors
+
+# Tmux Plugins
+tmux/*
+!tmux/plugins/tpm
