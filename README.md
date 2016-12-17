@@ -1,27 +1,28 @@
-#Shreyas MM Ubuntu Dotfiles
+#Dotfiles
+A collection of my personal dotfiles. Here's a little preview of what it can look like:
 These files contain Configuration for
-+ gitconfig
-+ env
-+ alias
-+ zsh
-+ vim
-+ gemrc
-+ fstab
-+ Sublime Text 3
+zsh,vim,tmux,gem,fstab,gitconfig,sublime text 3
 
 
-##Installation
-Cloning onto another machine
+
+##Installations
+Your first step is to clone this repository:
+    git clone --recursive https://github.com/MMShreyas/dotfiles.git .dotfiles
+
 ````
-$ git clone https://github.com/MMShreyas/dotfiles.git .dotfiles
-$ rm -r .vim .vimrc .zshrc .gitconfig
-$ ln -s .dotfiles/vim .vim
-$ ln -s .dotfiles/vimrc .vimrc
-$ ln -s .dotfiles/alias .alias
-$ ln -s .dotfiles/zshrc .zshrc
-$ ln -s .dotfiles/gitconfig .gitconfig
-$ ln -s .dotfiles/env .env
+rm -r .vim .vimrc .zshrc .gitconfig
+ln -s .dotfiles/vim .vim
+ln -s .dotfiles/vimrc .vimrc
+ln -s .dotfiles/gemrc .gemrc
+ln -s .dotfiles/alias .alias
+ln -s .dotfiles/zshrc .zshrc
+ln -s .dotfiles/gitconfig .gitconfig
+ln -s .dotfiles/env .env
 ````
 
+##Usage
+open vim and run :PluginInstall
+open tmux and press Ctrl + a and I to start installations of plugins
 
-## Feel Free to Steal it,Happy Coding
+##Licence
+GPL3

@@ -22,9 +22,10 @@ alias sts='systemctl status'
 alias srt='systemctl start'
 alias stp='systemctl stop'
 alias appi="sudo apt-get install"
-alias apps="apt-cache show"
+alias appr="sudo apt-get remove"
+alias appsearch="apt-cache show"
 alias appupd="sudo apt-get update"
-alias appupg="sudo apt-get update && sudo apt-get updrade"
+alias appupg="sudo apt-get update && sudo apt-get upgrade"
 
 #git
 alias gs="git status"
