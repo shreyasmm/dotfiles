@@ -1,6 +1,6 @@
 # Prefer Indian English and use UTF-8
-export LC_ALL="en_IN.UTF-8"
-export LANG="en_IN"
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
 
 # Editors
 export EDITOR='vim'
@@ -18,15 +18,15 @@ export HOME="/home/shrey"
 #export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
 
 # Brew
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+export PATH="$HOME/.dotfiles/brew/bin:$PATH"
+export MANPATH="$HOME/.dotfiles/brew/share/man:$MANPATH"
+export INFOPATH="$HOME/.dotfiles/brew/share/info:$INFOPATH"
 
 # Powerlevel9k Config
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status battery time rbenv virtualenv nvm )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status rbenv virtualenv nvm )
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
@@ -42,5 +42,8 @@ POWERLEVEL9K_BATTERY_ICON='\uF201 '
 # rbenv init
 eval "$(rbenv init -)"
 
-export NVM_DIR="$HOME/.nvm"
- . "$(brew --prefix nvm)/nvm.sh"
+#export NVM_DIR="$HOME/.dotfiles/nvm"
+#
+
+export NVM_DIR="$HOME/.dotfiles/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

@@ -7,6 +7,7 @@ alias ..='cd ..'
 alias search="ps aux|grep -i"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias rmrf="rm -rf"
+alias tx="tmux new -s Dev && tmux attach -t Dev"
 
 # Utilities
 alias week='date +%V'
@@ -21,17 +22,18 @@ alias nyan='nc -v nyancat.dakko.us 23'
 alias sts='systemctl status'
 alias srt='systemctl start'
 alias stp='systemctl stop'
-alias appi="sudo apt-get install"
-alias appr="sudo apt-get remove"
+alias appi="sudo apt install"
+alias appr="sudo apt remove"
 alias appsearch="apt-cache show"
-alias appupd="sudo apt-get update"
-alias appupg="sudo apt-get update && sudo apt-get upgrade"
+alias appupd="sudo apt update"
+alias appupg="sudo apt update && sudo apt-get upgrade"
 
 #git
 alias gs="git status"
 alias gc="git commit"
 alias ga="git add"
 alias gpo="git push origin"
+
 # Projects
 alias lard='cd ~/Code/Laravel'
 alias railsd='cd ~/Code/Rails'
