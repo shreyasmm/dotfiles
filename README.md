@@ -6,7 +6,7 @@ zsh,vim,tmux,gem,fstab,gitconfig,sublime text 3
 
 
 ## Installations
-Your first step is to clone this repository:
+1. Your first step is to clone this repository:
     git clone --recursive https://github.com/shreyasmm/dotfiles.git .dotfiles
 
 ````
@@ -21,12 +21,9 @@ ln -s .dotfiles/env .env
 ln -s .dotfiles/rbenv .rbenv
 ln -s .dotfiles/brew .linuxbrew 
 ````
-Download an Terminal font [Nerd Font](https://github.com/ryanoasis/nerd-fonts) 
-:simple_smile:
-
-## Usage
-open vim and run :PluginInstall
-open tmux and press Ctrl + a and I to start installations of plugins
+2.Download any Terminal font from [Nerd Font](https://github.com/ryanoasis/nerd-fonts) and set it as default terminal font
+3.Open vim and run :PluginInstall
+4.Open tmux and press Ctrl + a and I to start installations of plugins
 
 ## Licence
 GPL3
