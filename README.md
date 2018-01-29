@@ -21,7 +21,7 @@ ln -s .dotfiles/env .env
 ln -s .dotfiles/rbenv .rbenv
 ln -s .dotfiles/brew .linuxbrew 
 ````
-Download an Terminal font (Nerd Font)[https://github.com/ryanoasis/nerd-fonts] 
+Download an Terminal font [Nerd Font](https://github.com/ryanoasis/nerd-fonts) :simple_smile:
 
 ## Usage
 open vim and run :PluginInstall
