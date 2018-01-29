@@ -7,7 +7,7 @@ These files contain Configuration for zsh, vim, tmux, gem, fstab, gitconfig, sub
 ````
 git clone --recursive https://github.com/shreyasmm/dotfiles.git .dotfiles
 ````
-### Setup Dotfiles
+Run these to Setup Dotfiles
 ````
 rm -r .vim .vimrc .zshrc .gitconfig
 ln -s .dotfiles/vim .vim
