@@ -3,8 +3,11 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 These files contain Configuration for zsh, vim, tmux, gem, fstab, gitconfig, sublime text 3
 
 ## Installations
-1. Your first step is to clone this repository:
-````git clone --recursive https://github.com/shreyasmm/dotfiles.git .dotfiles````
+1. Clone repository:
+
+````
+git clone --recursive https://github.com/shreyasmm/dotfiles.git .dotfiles
+````
 
 ````
 rm -r .vim .vimrc .zshrc .gitconfig
