@@ -18,6 +18,8 @@ ln -s .dotfiles/alias .alias
 ln -s .dotfiles/zshrc .zshrc
 ln -s .dotfiles/gitconfig .gitconfig
 ln -s .dotfiles/env .env
+ln -s .dotfiles/rbenv .rbenv
+ln -s .dotfiles/brew .linuxbrew 
 ````
 
 ## Usage
