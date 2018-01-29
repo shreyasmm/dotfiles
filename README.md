@@ -7,7 +7,7 @@ zsh,vim,tmux,gem,fstab,gitconfig,sublime text 3
 
 ##Installations
 Your first step is to clone this repository:
-    git clone --recursive https://github.com/MMShreyas/dotfiles.git .dotfiles
+    git clone --recursive https://github.com/shreyasmm/dotfiles.git .dotfiles
 
 ````
 rm -r .vim .vimrc .zshrc .gitconfig
