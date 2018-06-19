@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Ayu Dark",
+    "editor.fontSize": 22,
+    "workbench.activityBar.visible": false,
+    "terminal.integrated.fontFamily": "RobotoMono Nerd Font Mono",
+    "terminal.integrated.fontSize": 22,
+}
