@@ -2,7 +2,7 @@
 source $HOME/.env
 source $HOME/.alias
 source $HOME/.functions
-
+# ZSH_DISABLE_COMPFIX=true
 # antigen
 source $HOME/.dotfiles/antigen/antigen.zsh
 
@@ -27,9 +27,10 @@ antigen-bundle docker
 antigen-bundle history
 antigen-bundle systemadmin
 
-
-# Other Plugins
+# Other bundles
 antigen bundle zsh-users/zsh-syntax-highlighting
+#antigen bundle zsh-users/zsh-history-substring-search
+#antigen bundle tarruda/zsh-autosuggestions
 
 # Load the theme.
 antigen theme bhilburn/powerlevel9k powerlevel9k
