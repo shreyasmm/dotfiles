@@ -2,6 +2,8 @@
 
 # Common
 alias c='clear'
+alias ls="colorls"
+alias ll="colorls -l"
 alias s=sudo
 alias ..='cd ..'
 alias search="ps aux|grep -i"
