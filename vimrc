@@ -55,7 +55,7 @@ set noshowmode
 
 "Vim Settings
 set t_Co=256              " Enable Full Color Support
-colors xoria256
+'colors xoria256
 set mouse=a
 set ttymouse=xterm2
 set number                " show line numbers
