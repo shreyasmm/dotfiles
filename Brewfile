@@ -1,6 +1,10 @@
+brew "lsd"
+brew "rbenv"
+brew "saml2aws"
+
 brew "thefuck"
 brew "exa"
-brew "rbenv"
+
 brew "rclone"
 brew "fzf "
-brew "saml2aws"
+
