@@ -1,43 +1,37 @@
+source $HOME/.dotfiles/shell/env.sh
+source $HOME/.dotfiles/shell/alias.sh
 
-source $HOME/.env
-source $HOME/.alias
-source $HOME/.functions
-# ZSH_DISABLE_COMPFIX=true
-# antigen
-source $HOME/.dotfiles/antigen/antigen.zsh
+# self update
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# program plugins
+zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/colored-man-pages", from:oh-my-zsh
 
-# oh-my-zsh's plugins
-antigen-bundle bgnotify
-antigen-bundle git
-antigen-bundle common-aliases
-antigen bundle command-not-found
-antigen-bundle git-extras
-antigen-bundle web-search
-antigen-bundle colorize
-antigen-bundle sudo
-antigen-bundle rails
-antigen-bundle ruby
-antigen-bundle npm
-antigen-bundle bower
-antigen-bundle gem
-antigen-bundle docker
-antigen-bundle history
-antigen-bundle systemadmin
+# utility plugins
+zplug "plugins/bgnotify", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/common-aliases", from:oh-my-zsh
+zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
+zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
+zplug "lib/completion", from:oh-my-zsh
+zplug "lib/fzf", from:oh-my-zsh
+zplug "lib/nvm", from:oh-my-zsh
+zplug "djui/alias-tips"
+zplug "plugins/kubectl", from:oh-my-zsh
+# theme
+zplug romkatv/powerlevel10k, use:powerlevel10k.zsh-theme
 
-# Other bundles
-antigen bundle zsh-users/zsh-syntax-highlighting
-#antigen bundle zsh-users/zsh-history-substring-search
-#antigen bundle tarruda/zsh-autosuggestions
+# install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
 
-# Load the theme.
-antigen theme bhilburn/powerlevel9k powerlevel9k
-
-antigen-apply
+# Then, source plugins and add commands to $PATH
+zplug load #--verbose
 
 
-#autoload predict-on
-#predict-on
-
+if [ /snap/bin/kubectl ]; then source <(kubectl completion zsh); fi

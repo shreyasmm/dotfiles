@@ -1,30 +1,50 @@
+" Bootstrap Plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
+
+
+
+
+" Initialize plugin system
+call plug#end()
+
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax enable
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'Raimondi/delimitMate.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'docunext/closetag.vim.git'
-Bundle 'scrooloose/syntastic.git'
+"Plugin 'gmarik/Vundle.vim'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Bundle 'nanotech/jellybeans.vim'
+"Bundle 'Raimondi/delimitMate.git'
+"Bundle 'scrooloose/nerdtree.git'
+"Bundle 'docunext/closetag.vim.git'
+"Bundle 'scrooloose/syntastic.git'
 
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+"call vundle#end()            " required
 
 
 "Airline Settings
@@ -80,8 +100,8 @@ nmap <leader>w :w!<cr>
 imap jj <esc>
 " Make syntastic auto update the location list and make it also check
 " when the file opens
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_check_on_open=1
+"let g:syntastic_always_populate_loc_list=1
+"let g:syntastic_check_on_open=1
 
 
 "" Searching

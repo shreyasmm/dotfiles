@@ -1,18 +1,12 @@
-[submodule "antigen"]
-	path = antigen
-	url = https://github.com/zsh-users/antigen.git
-[submodule "vim/bundle/Vundle.vim"]
-	path = vim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
+[submodule "submodules/linuxbrew/brew"]
+	path = submodules/linuxbrew/brew
+	url = https://github.com/Homebrew/brew
+[submodule "submodules/nvm"]
+	path = submodules/nvm
+	url = https://github.com/nvm-sh/nvm.git
+[submodule "submodules/zplug"]
+	path = submodules/zplug
+	url = https://github.com/zplug/zplug
+[submodule "submodules/tmux/plugins/tpm"]
+	path = submodules/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "rbenv"]
-	path = rbenv
-	url = https://github.com/rbenv/rbenv.git
-[submodule "nvm"]
-	path = nvm
-	url = https://github.com/creationix/nvm.git
-[submodule "brew"]
-	path = brew
-	url = https://github.com/Linuxbrew/brew.git
