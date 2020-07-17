@@ -4,8 +4,7 @@
 sudo apt-get install build-essential curl file git
 
 # Shell Utilites
-apt install tmux
-apt install zsh
+sudo apt install zsh tmux
 
 # Rails Installation
 # sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev 
