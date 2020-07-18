@@ -6,6 +6,10 @@ sudo apt install -y build-essential curl file git
 # Shell Utilites
 sudo apt install -y zsh tmux vim
 
+# Utilites
+sudo apt install -y tilix
+
+
 # Rails Installation
 # sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev 
 
