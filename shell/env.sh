@@ -13,6 +13,14 @@ source $HOME/.dotfiles/submodules/zplug/init.zsh
 # brew
 eval $(~/.dotfiles/submodules/linuxbrew/brew/bin/brew shellenv)
 
+# zsh completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # editor
 export EDITOR='vim'
 export VISUAL='nano'
