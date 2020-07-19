@@ -21,3 +21,6 @@ sudo apt install -y tilix
 # sudo snap install sublime-text --classic
 # sudo snap install slack --classic
 # sudo snap install skype --classic
+
+# vscode extentions
+# cat extensions.list | grep -v '^#' | xargs -L1 code --install-extension
