@@ -32,6 +32,3 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load #--verbose
-
-
-if [ /snap/bin/kubectl ]; then source <(kubectl completion zsh); fi
