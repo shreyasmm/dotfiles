@@ -6,12 +6,12 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # program plugins
 zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/colored-man-pages", from:oh-my-zsh
+# zplug "plugins/colored-man-pages", from:oh-my-zsh
 
 # utility plugins
 zplug "plugins/bgnotify", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
-zplug "plugins/common-aliases", from:oh-my-zsh
+# zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", from:github, defer:2
 zplug "zsh-users/zsh-autosuggestions", from:github, defer:2
 zplug "lib/completion", from:oh-my-zsh
