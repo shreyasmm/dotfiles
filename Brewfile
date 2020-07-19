@@ -1,10 +1,9 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "versent/taps"
+brew "awscli"
+brew "fzf"
 brew "lsd"
 brew "rbenv"
-brew "bat"
-
-tap "versent/homebrew-taps"
-brew "saml2aws"
-
 brew "rclone"
-brew "fzf "
-
+brew "versent/taps/saml2aws"
