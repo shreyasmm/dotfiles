@@ -33,4 +33,5 @@ alias k='kubectl'
 alias kg='kubectl get'
 
 alias ls='lsd'
+alias cat='bat'
 
