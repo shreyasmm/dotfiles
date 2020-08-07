@@ -15,6 +15,8 @@ alias ramdisk="sudo mount -t tmpfs tmpfs /home/shrey/Others/ramdisk -o size=2048
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias free='free -m'
+alias df='df -h'
 
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
