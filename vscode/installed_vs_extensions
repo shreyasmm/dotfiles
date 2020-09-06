@@ -7,6 +7,7 @@ DavidAnson.vscode-markdownlint
 donjayamanne.githistory
 emilast.LogFileHighlighter
 equinusocio.vsc-material-theme-icons
+esbenp.prettier-vscode
 file-icons.file-icons
 golang.go
 hashicorp.terraform
@@ -14,8 +15,10 @@ jebbs.markdown-extended
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
-ms-vscode.powershell
 redhat.vscode-yaml
+robole.marky-dynamic
+robole.marky-markdown
+robole.marky-stats
 spywhere.guides
 sveggiani.vscode-field-lights
 teabyii.ayu
