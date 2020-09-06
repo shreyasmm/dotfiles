@@ -1,3 +1,4 @@
 # Submodules
 submodules/*
+submodules/linuxbrew/brew
 !submodules/vim/colors/*
