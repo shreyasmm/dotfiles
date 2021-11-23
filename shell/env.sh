@@ -36,8 +36,15 @@ export PAGER='less'
 export NVM_DIR="$HOME/.dotfiles/submodules/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# rust
+export RUSTUP_HOME="$HOME/.rustup"
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # work
-export AWS_DEFAULT_PROFILE="ss-np"
+# AWS
+export AWS_DEFAULT_REGION='us-east-1'
+export AWS_DEFAULT_PROFILE='ist-s'
 
 # history management
 HISTFILE="$HOME/.zsh_history"
