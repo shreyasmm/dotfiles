@@ -33,7 +33,8 @@ alias nyan='nc -v nyancat.dakko.us 23'
 # Kubernetes
 alias k='kubectl'
 alias kg='kubectl get'
+alias awsssh="aws ssm start-session --target"
 
 alias ls='lsd'
 alias cat='bat'
-
+alias update='npm -g update && brew upgrade && sudo apt update && sudo apt upgrade && flatpak update'
