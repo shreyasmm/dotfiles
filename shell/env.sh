@@ -11,7 +11,8 @@ export ZPLUG_HOME="$HOME/.dotfiles/submodules/zplug"
 source $HOME/.dotfiles/submodules/zplug/init.zsh
 
 # brew
-eval $(~/.linuxbrew/bin/brew shellenv)
+# eval $(~/.linuxbrew/bin/brew shellenv)
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # zsh completions
 if type brew &>/dev/null; then
