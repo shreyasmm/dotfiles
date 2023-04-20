@@ -85,3 +85,7 @@ POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_BATTERY_ICON="\uf201"
 
 POWERLEVEL9K_STATUS_VERBOSE=true
+
+POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl|helm|kubens|kubectx|oc|istioctl|kogito|k9s|helmfile|flux|fluxctl|stern|kubeseal|skaffold'
+POWERLEVEL9K_INSTANT_PROMPT=off
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
