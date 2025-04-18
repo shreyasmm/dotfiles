@@ -4,15 +4,25 @@
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
+# zinit
+ZINIT_HOME="$HOME/.dotfiles/submodules/zinit"
+source "${ZINIT_HOME}/zinit.zsh"
+
 # zplug
-export ZPLUG_HOME="$HOME/.dotfiles/submodules/zplug"
+#export ZPLUG_HOME="$HOME/.dotfiles/submodules/zplug"
 
 # zplug init
-source $HOME/.dotfiles/submodules/zplug/init.zsh
+#source $HOME/.dotfiles/submodules/zplug/init.zsh
 
 # brew
 # eval $(~/.linuxbrew/bin/brew shellenv)
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+eval "$(fzf --zsh)"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # zsh completions
 if type brew &>/dev/null; then
@@ -23,7 +33,7 @@ if type brew &>/dev/null; then
 fi
 
 # editor
-export EDITOR='vim'
+export EDITOR='nvim'
 export VISUAL='nano'
 export PAGER='less'
 
@@ -32,10 +42,13 @@ export PAGER='less'
 # export PATH=$PATH:/snap/bin
 # eval "$(rbenv init -)"
 
+# Keybindings
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 
 # nvm
-export NVM_DIR="$HOME/.dotfiles/submodules/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+#export NVM_DIR="$HOME/.dotfiles/submodules/nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # rust
 export RUSTUP_HOME="$HOME/.rustup"
@@ -45,12 +58,14 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # work
 # AWS
 export AWS_DEFAULT_REGION='us-east-1'
-export AWS_DEFAULT_PROFILE='ist-s'
+export AWS_DEFAULT_PROFILE='ss-np'
 
 # history management
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
+HISTDUP=erase
 SAVEHIST=10000000
+
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
@@ -88,4 +103,4 @@ POWERLEVEL9K_STATUS_VERBOSE=true
 
 POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl|helm|kubens|kubectx|oc|istioctl|kogito|k9s|helmfile|flux|fluxctl|stern|kubeseal|skaffold'
 POWERLEVEL9K_INSTANT_PROMPT=off
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=on
