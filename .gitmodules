@@ -1,9 +1,6 @@
 [submodule "submodules/nvm"]
 	path = submodules/nvm
 	url = https://github.com/nvm-sh/nvm.git
-[submodule "submodules/zplug"]
-	path = submodules/zplug
-	url = https://github.com/zplug/zplug
 [submodule "submodules/tmux/plugins/tpm"]
 	path = submodules/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm

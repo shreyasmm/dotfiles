@@ -9,25 +9,23 @@ source $HOME/.dotfiles/shell/env.sh
 source $HOME/.dotfiles/shell/alias.sh
 
 #zinit
+# Active bgnotify plugin
 zinit ice wait lucid
 zinit snippet OMZP::bgnotify
 
-#zinit ice wait lucid
-#zinit snippet OMZP::command-not-found
-
+# Fast syntax highlighting
 zinit ice wait lucid
-#zinit light zsh-users/zsh-syntax-highlighting
 zinit light zdharma-continuum/fast-syntax-highlighting
 
+# Autosuggestions
 zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
 
+# Alias tips
 zinit ice wait lucid
 zinit light djui/alias-tips
 
-#zinit ice wait lucid
-#zinit light Aloxaf/fzf-tab
-
+# Autocomplete
 zinit ice wait lucid
 zinit light marlonrichert/zsh-autocomplete
 
