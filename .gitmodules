@@ -1,15 +1,9 @@
-[submodule "submodules/nvm"]
-	path = submodules/nvm
-	url = https://github.com/nvm-sh/nvm.git
-[submodule "submodules/zplug"]
-	path = submodules/zplug
-	url = https://github.com/zplug/zplug
 [submodule "submodules/tmux/plugins/tpm"]
 	path = submodules/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "submodules/brew"]
-	path = submodules/brew
-	url = https://github.com/Homebrew/brew.git
 [submodule "submodules/zinit"]
 	path = submodules/zinit
-	url = https://github.com/zdharma-continuum/zinit.git
+	url = https://github.com/zdharma-continuum/zinit
+[submodule "submodules/shell-color-scripts"]
+	path = submodules/shell-color-scripts
+	url = https://gitlab.com/dwt1/shell-color-scripts.git

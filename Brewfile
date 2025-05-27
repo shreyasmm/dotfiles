@@ -1,18 +1,22 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
-tap "versent/taps"
-brew "aria2"
-brew "aws-iam-authenticator"
-brew "awscli"
-brew "bat"
-brew "go"
-brew "helm"
-brew "httpie"
-brew "jq"
-brew "kubernetes-cli"
+
+## Others
+# brew "youtube-dl"
+# brew "aws-iam-authenticator"
+
+## Shell tools
 brew "lsd"
-brew "rbenv"
+brew "bat"
+brew "aria2"
 brew "rclone"
 brew "tree"
-brew "youtube-dl"
-brew "versent/taps/saml2aws"
+
+## Development tools
+brew "jq"
+brew "yq"
+brew "terraform"
+brew "uv"
+brew "neovim"
+brew "nvm"
+brew "awscli"
