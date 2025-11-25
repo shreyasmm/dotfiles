@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# =============================================================================
-# 🚀 Dotfiles Initialization Script
-# =============================================================================
+# Dotfiles Initialization Script
 # This script performs complete setup of dotfiles on a new system.
 # Run this once after cloning the repository for full automated setup.
 
@@ -38,35 +36,21 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
-print_status "🎯 Starting dotfiles initialization..."
+print_status "Starting dotfiles initialization..."
 
-# -----------------------------------------------------------------------------
-# 🍺 Homebrew Installation
-# -----------------------------------------------------------------------------
-print_status "📦 Setting up Homebrew..."
+# Homebrew Installation
+print_status "Setting up Homebrew..."
 
 if ! command_exists brew; then
     print_status "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    
-    # Add Homebrew to PATH
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-    else
-        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    fi
-    
     print_success "Homebrew installed successfully!"
 else
     print_success "Homebrew already installed!"
 fi
 
-# -----------------------------------------------------------------------------
-# 📦 Install Homebrew Packages
-# -----------------------------------------------------------------------------
-print_status "📋 Installing Homebrew packages..."
+# Install Homebrew Packages
+print_status "Installing Homebrew packages..."
 
 if [[ -f "$DOTFILES_DIR/Brewfile" ]]; then
     cd "$DOTFILES_DIR"
@@ -76,10 +60,8 @@ else
     print_warning "Brewfile not found, skipping Homebrew package installation"
 fi
 
-# -----------------------------------------------------------------------------
-# 🔗 Create Symbolic Links
-# -----------------------------------------------------------------------------
-print_status "🔗 Creating symbolic links..."
+# Create Symbolic Links
+print_status "Creating symbolic links..."
 
 # Shell Configuration
 if [[ -f "$DOTFILES_DIR/zshrc" ]]; then
@@ -110,12 +92,6 @@ if [[ -f "$DOTFILES_DIR/gitconfig" ]]; then
     print_success "Git configuration linked"
 fi
 
-# Ruby Configuration
-if [[ -f "$DOTFILES_DIR/gemrc" ]]; then
-    ln -sf "$DOTFILES_DIR/gemrc" "$HOME/.gemrc"
-    print_success "Ruby Gem configuration linked"
-fi
-
 # Ghostty Terminal Configuration
 if [[ -f "$DOTFILES_DIR/ghostty.config" ]]; then
     mkdir -p "$HOME/.config/ghostty"
@@ -123,19 +99,15 @@ if [[ -f "$DOTFILES_DIR/ghostty.config" ]]; then
     print_success "Ghostty configuration linked"
 fi
 
-# -----------------------------------------------------------------------------
-# 📁 Directory Setup
-# -----------------------------------------------------------------------------
-print_status "📁 Setting up directories..."
+# Directory Setup
+print_status "Setting up directories..."
 
 # Create ramdisk directory for high-speed temporary storage
 mkdir -p ~/Others/ramdisk
 print_success "Ramdisk directory created"
 
-# -----------------------------------------------------------------------------
-# 🐚 Shell Configuration
-# -----------------------------------------------------------------------------
-print_status "🐚 Configuring shell..."
+# Shell Configuration
+print_status "Configuring shell..."
 
 # Install zsh if not present
 if ! command_exists zsh; then
@@ -158,10 +130,8 @@ else
     print_success "Zsh is already the default shell"
 fi
 
-# -----------------------------------------------------------------------------
-# 🔌 Tmux Plugin Setup
-# -----------------------------------------------------------------------------
-print_status "🔌 Setting up Tmux plugins..."
+# Tmux Plugin Setup
+print_status "Setting up Tmux plugins..."
 
 if command_exists tmux; then
     # Install TPM if not present
@@ -170,7 +140,7 @@ if command_exists tmux; then
         git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
         print_success "TPM installed"
     fi
-    
+
     # Install tmux plugins
     print_status "Installing tmux plugins..."
     if tmux list-sessions >/dev/null 2>&1; then
@@ -187,33 +157,16 @@ else
     print_warning "Tmux not found, skipping plugin setup"
 fi
 
-# -----------------------------------------------------------------------------
-# 📦 Additional System Packages
-# -----------------------------------------------------------------------------
-print_status "📦 Installing additional system packages..."
+# Additional System Packages
+print_status "Installing additional system packages..."
 
 if [[ -f "$DOTFILES_DIR/shell/packages.sh" ]]; then
     bash "$DOTFILES_DIR/shell/packages.sh"
     print_success "Additional packages installed"
 fi
 
-# -----------------------------------------------------------------------------
-# 🎨 Color Scripts Setup
-# -----------------------------------------------------------------------------
-print_status "🎨 Setting up color scripts..."
-
-if [[ -d "$DOTFILES_DIR/submodules/shell-color-scripts" ]]; then
-    cd "$DOTFILES_DIR/submodules/shell-color-scripts"
-    if command_exists make; then
-        sudo make install >/dev/null 2>&1 || print_warning "Failed to install color scripts (may need sudo)"
-    fi
-    print_success "Color scripts ready"
-fi
-
-# -----------------------------------------------------------------------------
-# ✅ Final Steps
-# -----------------------------------------------------------------------------
-print_status "✨ Finalizing setup..."
+# Final Steps
+print_status "Finalizing setup..."
 
 # Source zsh configuration if possible
 if [[ -f "$HOME/.zshrc" ]]; then
@@ -222,16 +175,14 @@ if [[ -f "$HOME/.zshrc" ]]; then
     zsh -c "source ~/.zshrc" 2>/dev/null || print_warning "Please restart your terminal or run 'source ~/.zshrc'"
 fi
 
-print_success "🎉 Dotfiles initialization complete!"
+print_success "Dotfiles initialization complete!"
 echo
-print_status "📝 Next steps:"
-echo "  1. 🔄 Restart your terminal or run 'source ~/.zshrc'"
-echo "  2. 🎭 Install a Nerd Font from https://github.com/ryanoasis/nerd-fonts"
-echo "  3. 🔧 Configure Git with your personal details:"
+print_status "Next steps:"
+echo "  1. Restart your terminal or run 'source ~/.zshrc'"
+echo "  2. Install a Nerd Font from https://github.com/ryanoasis/nerd-fonts"
+echo "  3. Configure Git with your personal details:"
 echo "     git config --global user.name 'Your Name'"
 echo "     git config --global user.email 'your.email@example.com'"
-echo "  4. 🔑 Set up SSH keys if needed:"
+echo "  4. Set up SSH keys if needed:"
 echo "     ssh-keygen -t ed25519 -C 'your.email@example.com'"
-echo "  5. 🎨 Try color scripts: colorscript -r"
-echo
-print_success "🚀 Happy coding!"
+print_success "Happy coding!"

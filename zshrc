@@ -29,8 +29,22 @@ source $HOME/.dotfiles/shell/alias.sh
 # -----------------------------------------------------------------------------
 # Background notifications for long-running commands
 # Shows desktop notification when command completes
+#zinit ice wait lucid
+#zinit snippet OMZP::bgnotify
+
 zinit ice wait lucid
-zinit snippet OMZP::bgnotify
+zinit light atuinsh/atuin
+
+zinit ice wait lucid
+zinit light ajeetdsouza/zoxide
+
+
+zinit ice wait lucid light-mode for \
+    junegunn/fzf \
+    src"shell/fzf.plugin.zsh"
+
+#zinit ice lucid wait'0'
+#zinit light joshskidmore/zsh-fzf-history-search
 
 # Command not found suggestions (currently disabled)
 # Suggests package installation for missing commands
@@ -46,8 +60,8 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 # Uncomment any of these to enable:
 
 # Auto-suggestions based on command history
-# zinit ice wait lucid
-# zinit light zsh-users/zsh-autosuggestions
+zinit ice wait lucid
+zinit light zsh-users/zsh-autosuggestions
 
 # Shows aliases when you use the full command
 # zinit ice wait lucid
@@ -58,8 +72,8 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 # zinit light Aloxaf/fzf-tab
 
 # Advanced autocompletion system
-# zinit ice wait lucid
-# zinit light marlonrichert/zsh-autocomplete
+zinit ice wait lucid
+zinit light marlonrichert/zsh-autocomplete
 
 # -----------------------------------------------------------------------------
 # Theme Configuration
@@ -69,7 +83,7 @@ zinit ice depth"1"
 zinit light romkatv/powerlevel10k
 
 # Load Oh My Zsh completion library for enhanced tab completion
-zinit snippet OMZL::completion.zsh
+#zinit snippet OMZL::completion.zsh
 
 # -----------------------------------------------------------------------------
 # Additional Oh My Zsh Components

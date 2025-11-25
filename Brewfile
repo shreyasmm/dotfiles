@@ -11,10 +11,12 @@ brew "bat"
 brew "aria2"
 brew "rclone"
 brew "tree"
+brew "tmux"
 
 ## Development tools
 brew "jq"
 brew "yq"
+brew "gh"
 brew "terraform"
 brew "uv"
 brew "neovim"
