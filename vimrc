@@ -1,21 +1,40 @@
-" Bootstrap Plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+" Bootstrap vim-plug
+if has('nvim')
+  let s:vim_site_dir = stdpath('data') . '/site'
+  let s:plugged_dir = stdpath('data') . '/plugged'
+else
+  let s:vim_site_dir = expand('~/.vim')
+  let s:plugged_dir = expand('~/.vim/plugged')
 endif
 
-call plug#begin('~/.vim/plugged')
+let s:plug_file = s:vim_site_dir . '/autoload/plug.vim'
+let s:plug_installed = 0
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/nerdtree'
+if empty(glob(s:plug_file))
+  silent execute '!curl -fLo ' . shellescape(s:plug_file) . ' --create-dirs '
+        \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  let s:plug_installed = 1
+endif
 
+if filereadable(s:plug_file)
+  execute 'source' fnameescape(s:plug_file)
+  call plug#begin(s:plugged_dir)
 
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'preservim/nerdtree'
 
+  " Initialize plugin system
+  call plug#end()
 
-" Initialize plugin system
-call plug#end()
+  if s:plug_installed
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+else
+  echohl WarningMsg
+  echom 'vim-plug is not installed; skipping plugin setup'
+  echohl None
+endif
 
 
 set nocompatible              " be iMproved, required
@@ -57,7 +76,9 @@ set noshowmode
 set t_Co=256              " Enable Full Color Support
 "colors xoria256
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 set number                " show line numbers
 set laststatus=2          " last window always has a statusline
 filetype indent on        " activates indenting for files
@@ -83,9 +104,15 @@ set listchars+=eol:↴           " │ represent invisible characters
 set listchars+=nbsp:_          " ┘
 "set background=dark        " Dark background
 set expandtab             " Expand tabs to spaces
-" Move Backup Files to ~/.vim/sessions
-set backupdir=~/.vim/sessions
-set dir=~/.vim/sessions
+" Move backup and swap files out of project directories
+if has('nvim')
+  let s:session_dir = stdpath('state') . '/sessions'
+else
+  let s:session_dir = expand('~/.vim/sessions')
+endif
+call mkdir(s:session_dir, 'p')
+let &backupdir = s:session_dir . '//'
+let &directory = s:session_dir . '//'
 
 " enable automatic title setting for terminals
 set title

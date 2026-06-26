@@ -75,6 +75,12 @@ if [[ -f "$DOTFILES_DIR/vimrc" ]]; then
     print_success "Vim configuration linked"
 fi
 
+if [[ -f "$DOTFILES_DIR/nvim/init.vim" ]]; then
+    mkdir -p "$HOME/.config/nvim"
+    ln -sf "$DOTFILES_DIR/nvim/init.vim" "$HOME/.config/nvim/init.vim"
+    print_success "Neovim configuration linked"
+fi
+
 # Terminal Multiplexer
 if [[ -f "$DOTFILES_DIR/tmux.conf" ]]; then
     ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"

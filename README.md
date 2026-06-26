@@ -125,6 +125,8 @@ ln -sf ~/.dotfiles/zshrc ~/.zshrc
 
 # ✏️  Editor Configuration
 ln -sf ~/.dotfiles/vimrc ~/.vimrc
+mkdir -p ~/.config/nvim
+ln -sf ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 
 # 🖥️  Terminal Multiplexer
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
@@ -152,6 +154,15 @@ tmux new-session -d
 tmux send-keys 'C-a' 'I'
 ```
 
+### ✏️ Neovim Plugins
+Neovim loads `~/.config/nvim/init.vim`, which sources `~/.dotfiles/vimrc`.
+On first launch, the config bootstraps `vim-plug` into Neovim's data directory
+and installs the configured plugins automatically.
+
+```bash
+nvim
+```
+
 ### 🔄 Reload Configuration
 ```bash
 # Reload shell configuration
@@ -177,7 +188,7 @@ source ~/.zshrc
 ### 🎯 Shell Enhancements
 - **Zsh** with modern plugins via Zinit
 - **Tmux** with sensible defaults and plugins
-- **Vim** with essential configurations
+- **Neovim/Vim** with essential configurations
 - **Colorful scripts** for terminal aesthetics
 
 ### 🌈 Terminal Experience
@@ -232,6 +243,11 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc  # Lin
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
+```
+
+**Neovim plugins not working?**
+```bash
+nvim +'PlugInstall --sync' +qa
 ```
 
 </details>
