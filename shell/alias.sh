@@ -28,6 +28,9 @@ alias reload='exec zsh'
 # Clear terminal screen
 alias c='clear'
 
+# ls
+alias ll="ls -l --color=auto"
+
 # Mount RAM disk for temporary high-speed storage (2GB)
 alias ramdisk="sudo mount -t tmpfs tmpfs /home/shrey/Others/ramdisk -o size=2048m"
 
